@@ -33,12 +33,10 @@ constructor(private categoriaSvc: CategoriaService) {}
         return await this.categoriaSvc.actualizarCategorias(cveCategoria, categoria )
     }
 
-
-    @Delete(':cvecategoria')
+    @Delete(':cveCategoria')
     async eliminarCategorias(@Param('cveCategoria', ParseIntPipe) cveCategoria: number) {
         return await this.categoriaSvc.eliminar(cveCategoria);
     }
-
 
     @Patch(':cveCategoria/:estatus')
     async cambiarEstatusCategoria(@Param('cveCategoria', ParseIntPipe) cveCategoria: number, @Param('estatus', ParseBoolPipe) estatus: boolean) {
