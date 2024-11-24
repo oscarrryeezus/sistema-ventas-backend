@@ -56,7 +56,7 @@ export class ProductoService {
                 cveProducto: cveProducto,
             },
             data: {
-                estatus: true,  
+                estatus: estatus,  
             },
         });
     }
